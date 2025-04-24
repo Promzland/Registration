@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Student Login</title>
+  <link rel="stylesheet" href="Regist.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Login</h2>
+    <form onsubmit="return aj();">
+      <div class="form-group">
+        <label for="myusername">Username</label>
+        <input type="text" id="myusername" required>
+      </div>
+      <div class="form-group">
+        <label for="mypassword">Password</label>
+        <input type="password" id="mypassword" required>
+      </div>
+      <button type="submit">Login</button>
+      <p style="text-align:center; margin-top:10px;">
+        Don't have an account? <a href="registration.html">Register</a>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    function aj() {
+      const username = document.getElementById("myusername").value;
+      const password = document.getElementById("mypassword").value;
+
+      const storedName = localStorage.getItem("studentName");
+      const storedPass = localStorage.getItem("studentPass");
+
+      if (username === storedName && password === storedPass) {
+        alert("Login successfully!");
+        window.location.href = "student_dashboard.html";
+      } else {
+        alert("Incorrect username or password!");
+      }
+
+      return false;
+    }
+  </script>
+</body>
+</html>

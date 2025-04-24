@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.info-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #004b99;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.info-section h2 {
+  font-size: 1.8rem;
+  color: #0066cc;
+  margin-bottom: 20px;
+}
+
+.info-section p, .info-section ul {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.info-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header {
+  background-color: #0066cc;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active, nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #0066cc;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0055aa;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #0066cc;
+  color: #0066cc;
+}
+
+.btn.outline:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+}

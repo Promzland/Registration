@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Student Dashboard</title>
+    <style>
+        /* Sidebar styles */
+        .dashboard {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #ecf0f1;
+        }
+
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #ecf0f1;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #34495e;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background-color: #ecf0f1;
+        }
+
+        .main-content h1 {
+            font-size: 28px;
+        }
+
+        .logout {
+            margin-top: auto;
+            padding: 15px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .logout:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="sidebar">
+        <h2>Student Panel</h2>
+        <a href="profile.html">My Profile</a>
+        <a href="course _registration.html">Course Registration</a>
+        <a href="timetable.html">Class Timetable</a>
+        <a href="exams.html">Online Exam</a>
+        <a href="notices.html">Notice Board</a>
+        <a href="logout.html" class="logout">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome to Your Dashboard</h1>
+        <p>Select an option from the menu to continue.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef3f7;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px;
+            min-height: 100vh;
+        }
+
+        .registration-container {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+
+        .year-section {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f9f9fc;
+            border-left: 5px solid #4CAF50;
+            border-radius: 5px;
+        }
+
+        .year-section h3 {
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .year-section label {
+            display: block;
+            margin: 6px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .form-action {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Course Registration</h2>
+        <form onsubmit="return showSuccessMessage();">
+
+            <div class="year-section">
+                <h3>Year 1 Courses</h3>
+                <label><input type="checkbox" name="courses[]" value="MTH101"> MTH101 - Mathematics I</label>
+                <label><input type="checkbox" name="courses[]" value="GST101"> GST101 - Use of English</label>
+                <label><input type="checkbox" name="courses[]" value="CSC101"> CSC101 - Introduction to Computing</label>
+                <label><input type="checkbox" name="courses[]" value="PHY101"> PHY101 - General Physics I</label>
+            </div>
+
+            <div class="year-section">
+                <h3>Year 2 Courses</h3>
+                <label><input type="checkbox" name="courses[]" value="MTH201"> MTH201 - Advanced Calculus</label>
+                <label><input type="checkbox" name="courses[]" value="CSC201"> CSC201 - Data Structures</label>
+                <label><input type="checkbox" name="courses[]" value="PHY201"> PHY201 - Electromagnetism</label>
+                <label><input type="checkbox" name="courses[]" value="STA201"> STA201 - Statistics I</label>
+            </div>
+
+            <div class="year-section">
+                <h3>Year 3 Courses</h3>
+                <label><input type="checkbox" name="courses[]" value="CSC301"> CSC301 - Operating Systems</label>
+                <label><input type="checkbox" name="courses[]" value="MTH301"> MTH301 - Real Analysis</label>
+                <label><input type="checkbox" name="courses[]" value="CSC302"> CSC302 - Software Engineering</label>
+                <label><input type="checkbox" name="courses[]" value="CSC303"> CSC303 - Web Development</label>
+            </div>
+
+            <div class="year-section">
+                <h3>Year 4 Courses</h3>
+                <label><input type="checkbox" name="courses[]" value="CSC401"> CSC401 - Artificial Intelligence</label>
+                <label><input type="checkbox" name="courses[]" value="CSC402"> CSC402 - Machine Learning</label>
+                <label><input type="checkbox" name="courses[]" value="CSC403"> CSC403 - Final Year Project</label>
+                <label><input type="checkbox" name="courses[]" value="CSC404"> CSC404 - Cybersecurity</label>
+            </div>
+
+            <div class="form-action">
+                <input type="submit" value="Register Courses" class="submit-btn">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showSuccessMessage() {
+            alert("✅ Course registration successful!");
+            return false; // Prevent form from submitting
+        }
+    </script>
+</body>
+</html>

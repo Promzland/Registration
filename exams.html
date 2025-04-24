@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Online Exam</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f6fa;
+      padding: 40px;
+    }
+
+    .exam-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    .question h4 {
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    label {
+      display: block;
+      margin-left: 15px;
+      margin-bottom: 5px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #2c3e50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background: #1a242f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="exam-container">
+    <h2>Online Exam - Introduction to Computer Science</h2>
+    <form onsubmit="submitExam(event)">
+      
+      <div class="question">
+        <h4>1. What does CPU stand for?</h4>
+        <label><input type="radio" name="q1" value="a"> Central Process Unit</label>
+        <label><input type="radio" name="q1" value="b"> Central Processing Unit</label>
+        <label><input type="radio" name="q1" value="c"> Computer Personal Unit</label>
+        <label><input type="radio" name="q1" value="d"> Central Power Unit</label>
+      </div>
+
+      <div class="question">
+        <h4>2. Which of the following is a programming language?</h4>
+        <label><input type="radio" name="q2" value="a"> HTML</label>
+        <label><input type="radio" name="q2" value="b"> MS Word</label>
+        <label><input type="radio" name="q2" value="c"> Python</label>
+        <label><input type="radio" name="q2" value="d"> Google</label>
+      </div>
+
+      <div class="question">
+        <h4>3. What is the function of RAM?</h4>
+        <label><input type="radio" name="q3" value="a"> Permanent storage</label>
+        <label><input type="radio" name="q3" value="b"> Temporary memory</label>
+        <label><input type="radio" name="q3" value="c"> Display graphics</label>
+        <label><input type="radio" name="q3" value="d"> None of the above</label>
+      </div>
+
+      <input type="submit" value="Submit Exam">
+    </form>
+  </div>
+
+  <script>
+    function submitExam(event) {
+      event.preventDefault();
+      alert("Your exam has been submitted successfully!");
+      // You can add code here to process results or send to server
+    }
+  </script>
+
+</body>
+</html>

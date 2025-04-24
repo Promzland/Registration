@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notice Board</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f9;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .notice {
+      background-color: #ecf0f1;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #3498db;
+      border-radius: 8px;
+    }
+
+    .notice h4 {
+      margin: 0;
+      color: #34495e;
+    }
+
+    .notice p {
+      color: #555;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Notice Board</h2>
+
+    <div class="notice">
+      <h4>Exam Schedule for Final Year</h4>
+      <p>Final year exams will begin from May 10th, 2025. Make sure to check your timetable for the exact timings and locations.</p>
+    </div>
+
+    <div class="notice">
+      <h4>Library Open Hours</h4>
+      <p>The library will be open from 8:00 AM to 6:00 PM, Monday to Friday, and 9:00 AM to 2:00 PM on Saturdays.</p>
+    </div>
+
+    <div class="notice">
+      <h4>Course Registration Deadline</h4>
+      <p>Don't forget to complete your course registration by April 30th, 2025. Late registrations will incur a penalty fee.</p>
+    </div>
+
+    <h3>Post a New Notice</h3>
+    <form action="submit_notice.php" method="post">
+      <input type="text" name="notice_title" placeholder="Notice Title" required>
+      <textarea name="notice_content" rows="6" placeholder="Write the notice content here..." required></textarea>
+      <input type="submit" value="Post Notice">
+    </form>
+  </div>
+
+</body>
+</html>
