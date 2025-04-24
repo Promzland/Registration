@@ -1,5 +1,1 @@
-{
-    "rewrites": [
-        {"sources": "/", "destination": "/ Student_dashboard.html"}
-    ]
-}
+
